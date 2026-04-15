@@ -54,6 +54,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
         jChbElzAtivo = new javax.swing.JCheckBox();
         jFmtElzEmail = new javax.swing.JFormattedTextField();
         jFmtElzTelefone = new javax.swing.JFormattedTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -91,6 +92,8 @@ public class JDlgElzClientes extends javax.swing.JDialog {
 
         jChbElzAtivo.setText("ativo");
 
+        jButton1.setText("jButton1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,6 +101,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLblElzEstado)
@@ -207,7 +211,9 @@ public class JDlgElzClientes extends javax.swing.JDialog {
                     .addComponent(jFmtElzDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jChbElzAtivo)
                     .addComponent(jFmtElzTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -260,6 +266,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jChbElzAtivo;
     private javax.swing.JFormattedTextField jFmtElzCep;
     private javax.swing.JFormattedTextField jFmtElzCpf;
