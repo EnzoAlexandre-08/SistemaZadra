@@ -42,6 +42,12 @@ public class JDlgElzUsuarios extends javax.swing.JDialog {
         jTxtElzCodigo = new javax.swing.JTextField();
         jCboElzNivel = new javax.swing.JComboBox<>();
         jChbElzAtivo = new javax.swing.JCheckBox();
+        jBtnElzIncluir = new javax.swing.JButton();
+        jBtnElzAlterar = new javax.swing.JButton();
+        jBtnElzExcluir = new javax.swing.JButton();
+        jBtnElzCancelat = new javax.swing.JButton();
+        jBtnElzConfirmar = new javax.swing.JButton();
+        jBtnElzPesquisar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -65,39 +71,77 @@ public class JDlgElzUsuarios extends javax.swing.JDialog {
 
         jChbElzAtivo.setText("ativo");
 
+        jBtnElzIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnElzIncluir.setText("Incluir");
+
+        jBtnElzAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnElzAlterar.setText("Alterar");
+
+        jBtnElzExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnElzExcluir.setText("Excluir");
+
+        jBtnElzCancelat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnElzCancelat.setText("Cancelar");
+
+        jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.jpg"))); // NOI18N
+        jBtnElzConfirmar.setText("Confirmar");
+        jBtnElzConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzConfirmarActionPerformed(evt);
+            }
+        });
+
+        jBtnElzPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnElzPesquisar.setText("Pesquisar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTxtElzCodigo)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTxtElzNome, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblElzNome)
-                            .addComponent(jLblCpf)
-                            .addComponent(jFmtElzCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblElzCodigo)
+                            .addComponent(jTxtElzCodigo)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLblElzSenha))
-                                .addGap(47, 47, 47)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblElzNivel)
-                                    .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTxtElzNome, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLblElzNome)
+                                    .addComponent(jLblCpf)
+                                    .addComponent(jFmtElzCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLblElzCodigo)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLblElzSenha))
+                                        .addGap(47, 47, 47)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLblElzNivel)
+                                            .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLblElzDataNascimento)
+                                    .addComponent(jTxtElzApelido)
+                                    .addComponent(jLblElzApelido)
+                                    .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(61, 61, 61)
+                                        .addComponent(jChbElzAtivo)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 14, Short.MAX_VALUE)
+                        .addComponent(jBtnElzIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLblElzDataNascimento)
-                            .addComponent(jTxtElzApelido)
-                            .addComponent(jLblElzApelido)
-                            .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(jChbElzAtivo)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jBtnElzAlterar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnElzExcluir)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnElzCancelat)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnElzConfirmar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnElzPesquisar)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -126,19 +170,35 @@ public class JDlgElzUsuarios extends javax.swing.JDialog {
                             .addComponent(jFmtElzCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblElzSenha)
-                    .addComponent(jLblElzNivel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jChbElzAtivo))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLblElzSenha)
+                            .addComponent(jLblElzNivel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jChbElzAtivo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jBtnElzConfirmar)
+                            .addComponent(jBtnElzCancelat)
+                            .addComponent(jBtnElzExcluir)
+                            .addComponent(jBtnElzAlterar)
+                            .addComponent(jBtnElzIncluir)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jBtnElzPesquisar)))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnElzConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzConfirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +243,12 @@ public class JDlgElzUsuarios extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnElzAlterar;
+    private javax.swing.JButton jBtnElzCancelat;
+    private javax.swing.JButton jBtnElzConfirmar;
+    private javax.swing.JButton jBtnElzExcluir;
+    private javax.swing.JButton jBtnElzIncluir;
+    private javax.swing.JButton jBtnElzPesquisar;
     private javax.swing.JComboBox<String> jCboElzNivel;
     private javax.swing.JCheckBox jChbElzAtivo;
     private javax.swing.JFormattedTextField jFmtElzCpf;

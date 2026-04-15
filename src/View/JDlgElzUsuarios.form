@@ -23,41 +23,59 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTxtElzCodigo" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTxtElzNome" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
-                          <Component id="jLblElzNome" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLblCpf" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFmtElzCpf" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
-                          <Component id="jLblElzCodigo" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Component id="jTxtElzCodigo" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPwfElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLblElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTxtElzNome" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                  <Component id="jLblElzNome" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLblCpf" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jFmtElzCpf" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                                  <Component id="jLblElzCodigo" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jPwfElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLblElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLblElzNivel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCboElzNivel" min="-2" pref="181" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLblElzNivel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCboElzNivel" min="-2" pref="181" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLblElzDataNascimento" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTxtElzApelido" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLblElzApelido" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jFmtElzDataNascimento" alignment="0" pref="199" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                      <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
+                      <Component id="jBtnElzIncluir" min="-2" pref="89" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLblElzDataNascimento" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtElzApelido" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLblElzApelido" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFmtElzDataNascimento" alignment="0" pref="199" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                              <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jBtnElzAlterar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jBtnElzExcluir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jBtnElzCancelat" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jBtnElzConfirmar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jBtnElzPesquisar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -97,17 +115,33 @@
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLblElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLblElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLblElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jPwfElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCboElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jChbElzAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jBtnElzConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnElzCancelat" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnElzExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnElzAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnElzIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jBtnElzPesquisar" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jPwfElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCboElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jChbElzAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="102" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -181,6 +215,57 @@
     <Component class="javax.swing.JCheckBox" name="jChbElzAtivo">
       <Properties>
         <Property name="text" type="java.lang.String" value="ativo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzIncluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/incluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Incluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzAlterar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/alterar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Alterar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzExcluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Excluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzCancelat">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/cancelar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzConfirmar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/confirmar.jpg"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Confirmar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzConfirmarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnElzPesquisar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/pesquisar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
     </Component>
   </SubComponents>
