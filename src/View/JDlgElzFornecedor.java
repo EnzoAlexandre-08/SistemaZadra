@@ -350,6 +350,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnElzCancelatActionPerformed
 
     private void jBtnElzPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzPesquisarActionPerformed
+              JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnElzPesquisarActionPerformed
 
