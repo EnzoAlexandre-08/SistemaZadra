@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u08059751107
@@ -14,10 +16,39 @@ public class JDlgElzClientes extends javax.swing.JDialog {
      * Creates new form JDlgElzClientes
      */
     public JDlgElzClientes(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
-    }
+    super(parent, modal);
+    initComponents();
+    setTitle("Cadastro de Cliente");
+    setLocationRelativeTo(null);
+    habilitar(false);
+}
 
+      public void habilitar(boolean valor) {
+       jTxtElzNome.setEnabled(valor);
+       jFmtElzCep.setEnabled(valor);
+       jFmtElzRg.setEnabled(valor);
+       jFmtElzDataCadastro.setEnabled(valor);
+       jFmtElzDataNascimento.setEnabled(valor);
+       jFmtElzCpf.setEnabled(valor);
+       jFmtElzEmail.setEnabled(valor);
+       jFmtElzTelefone.setEnabled(valor);
+       jTxtElzCodigo.setEnabled(valor);
+       jTxtElzCidade.setEnabled(valor);
+       jTxtElzEndereco.setEnabled(valor);
+       jTxtElzEstado.setEnabled(valor);
+       jChbElzAtivo.setEnabled(valor);
+       jPwfElzSenha.setEnabled(valor);
+       jTxtElzEndereco.setEnabled(valor);
+       jTxtElzBairro.setEnabled(valor);
+       jBtnElzConfirmar.setEnabled(valor);
+       jBtnElzCancelat.setEnabled(valor);
+       jBtnElzAlterar.setEnabled(!valor);
+       jBtnElzExcluir.setEnabled(!valor);
+       jBtnElzIncluir.setEnabled(!valor);
+       jBtnElzPesquisar.setEnabled(!valor);
+       
+    }  
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,7 +63,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
         jLblElzRg = new javax.swing.JLabel();
         jLblElzDataNascimento = new javax.swing.JLabel();
         jLblElzEmail = new javax.swing.JLabel();
-        jPwfElzSenha = new javax.swing.JLabel();
+        Label = new javax.swing.JLabel();
         jLblElzTelefone = new javax.swing.JLabel();
         jLblElzCep = new javax.swing.JLabel();
         jLblElzEndereço = new javax.swing.JLabel();
@@ -40,7 +71,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
         jLblElzCidade = new javax.swing.JLabel();
         jLblElzEstado = new javax.swing.JLabel();
         jLblElzDataCadastro = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPwfElzSenha = new javax.swing.JPasswordField();
         jFmtElzCpf = new javax.swing.JFormattedTextField();
         jFmtElzDataCadastro = new javax.swing.JFormattedTextField();
         jFmtElzDataNascimento = new javax.swing.JFormattedTextField();
@@ -75,7 +106,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
 
         jLblElzEmail.setText("Email");
 
-        jPwfElzSenha.setText("Senha");
+        Label.setText("Senha");
 
         jLblElzTelefone.setText("Telefone");
 
@@ -101,21 +132,51 @@ public class JDlgElzClientes extends javax.swing.JDialog {
 
         jBtnElzIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnElzIncluir.setText("Incluir");
+        jBtnElzIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzIncluirActionPerformed(evt);
+            }
+        });
 
         jBtnElzAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnElzAlterar.setText("Alterar");
+        jBtnElzAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnElzExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnElzExcluir.setText("Excluir");
+        jBtnElzExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnElzCancelat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnElzCancelat.setText("Cancelar");
+        jBtnElzCancelat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzCancelatActionPerformed(evt);
+            }
+        });
 
         jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.jpg"))); // NOI18N
         jBtnElzConfirmar.setText("Confirmar");
+        jBtnElzConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnElzPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnElzPesquisar.setText("Pesquisar");
+        jBtnElzPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzPesquisarActionPerformed(evt);
+            }
+        });
 
         jLblElzCodigo.setText("Codigo");
 
@@ -155,13 +216,13 @@ public class JDlgElzClientes extends javax.swing.JDialog {
                         .addComponent(jFmtElzEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPwfElzSenha)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Label)
+                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLblElzEstado)
-                            .addComponent(jTxtElzEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtnElzIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTxtElzEstado, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                            .addComponent(jBtnElzIncluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -216,13 +277,13 @@ public class JDlgElzClientes extends javax.swing.JDialog {
                         .addComponent(jTxtElzNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPwfElzSenha)
+                            .addComponent(Label)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLblElzDataNascimento)
                                 .addComponent(jLblElzEmail)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jFmtElzEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -270,6 +331,37 @@ public class JDlgElzClientes extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtElzBairroActionPerformed
 
+    private void jBtnElzIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzIncluirActionPerformed
+        habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzIncluirActionPerformed
+
+    private void jBtnElzAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzAlterarActionPerformed
+        habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzAlterarActionPerformed
+
+    private void jBtnElzExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzExcluirActionPerformed
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+"Excluir registro", JOptionPane.YES_NO_OPTION);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzExcluirActionPerformed
+
+    private void jBtnElzCancelatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzCancelatActionPerformed
+          habilitar(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzCancelatActionPerformed
+
+    private void jBtnElzPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzPesquisarActionPerformed
+          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzPesquisarActionPerformed
+
+    private void jBtnElzConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzConfirmarActionPerformed
+          habilitar(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzConfirmarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -313,6 +405,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Label;
     private javax.swing.JButton jBtnElzAlterar;
     private javax.swing.JButton jBtnElzCancelat;
     private javax.swing.JButton jBtnElzConfirmar;
@@ -340,8 +433,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
     private javax.swing.JLabel jLblElzNome;
     private javax.swing.JLabel jLblElzRg;
     private javax.swing.JLabel jLblElzTelefone;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JLabel jPwfElzSenha;
+    private javax.swing.JPasswordField jPwfElzSenha;
     private javax.swing.JTextField jTxtElzBairro;
     private javax.swing.JTextField jTxtElzCidade;
     private javax.swing.JTextField jTxtElzCodigo;

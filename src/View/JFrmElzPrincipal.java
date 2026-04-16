@@ -16,6 +16,7 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
     public JFrmElzPrincipal() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,67 +28,92 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jChbElzFornecedor = new javax.swing.JMenu();
+        jChbElzCadastro = new javax.swing.JMenu();
+        jChbElzUsuarios = new javax.swing.JCheckBoxMenuItem();
         jChbElzClientes = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
+        jChbElzFornecedo = new javax.swing.JCheckBoxMenuItem();
+        jChbElzProdutos = new javax.swing.JCheckBoxMenuItem();
         jChbElzVendedor = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem5 = new javax.swing.JCheckBoxMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jChbElzSaie = new javax.swing.JCheckBoxMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
-        jChbElzVenda = new javax.swing.JCheckBoxMenuItem();
+        jChbElzVendaProduto = new javax.swing.JCheckBoxMenuItem();
         jChbElzCompras = new javax.swing.JCheckBoxMenuItem();
         jChbElzComprasProduto = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jChbElzFornecedor.setText("Cadastro");
+        jChbElzCadastro.setText("Cadastro");
 
-        jChbElzClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jChbElzClientes.setSelected(true);
-        jChbElzClientes.setText("Usuarios");
-        jChbElzClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
-        jChbElzClientes.addChangeListener(new javax.swing.event.ChangeListener() {
+        jChbElzUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzUsuarios.setSelected(true);
+        jChbElzUsuarios.setText("Usuarios");
+        jChbElzUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
+        jChbElzUsuarios.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jChbElzClientesStateChanged(evt);
+                jChbElzUsuariosStateChanged(evt);
             }
         });
-        jChbElzFornecedor.add(jChbElzClientes);
+        jChbElzUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzUsuariosActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzUsuarios);
 
-        jCheckBoxMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jCheckBoxMenuItem2.setSelected(true);
-        jCheckBoxMenuItem2.setText("Clientes");
-        jCheckBoxMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
-        jChbElzFornecedor.add(jCheckBoxMenuItem2);
+        jChbElzClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzClientes.setSelected(true);
+        jChbElzClientes.setText("Clientes");
+        jChbElzClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
+        jChbElzClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzClientesActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzClientes);
 
-        jCheckBoxMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jCheckBoxMenuItem3.setSelected(true);
-        jCheckBoxMenuItem3.setText("Fornecedor");
-        jCheckBoxMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.jpg"))); // NOI18N
-        jChbElzFornecedor.add(jCheckBoxMenuItem3);
+        jChbElzFornecedo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzFornecedo.setSelected(true);
+        jChbElzFornecedo.setText("Fornecedor");
+        jChbElzFornecedo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.jpg"))); // NOI18N
+        jChbElzFornecedo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzFornecedoActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzFornecedo);
 
-        jChbElzVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzProdutos.setSelected(true);
+        jChbElzProdutos.setText("Produtos");
+        jChbElzProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
+        jChbElzProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzProdutosActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzProdutos);
+
+        jChbElzVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jChbElzVendedor.setSelected(true);
-        jChbElzVendedor.setText("Produtos");
-        jChbElzVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
-        jChbElzFornecedor.add(jChbElzVendedor);
+        jChbElzVendedor.setText("Vendedor");
+        jChbElzVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendedor.jpg"))); // NOI18N
+        jChbElzVendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzVendedorActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzVendedor);
+        jChbElzCadastro.add(jSeparator1);
 
-        jCheckBoxMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jCheckBoxMenuItem5.setSelected(true);
-        jCheckBoxMenuItem5.setText("Vendedor");
-        jCheckBoxMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendedor.jpg"))); // NOI18N
-        jChbElzFornecedor.add(jCheckBoxMenuItem5);
-        jChbElzFornecedor.add(jSeparator1);
+        jChbElzSaie.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzSaie.setSelected(true);
+        jChbElzSaie.setText("Sair");
+        jChbElzSaie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
+        jChbElzCadastro.add(jChbElzSaie);
 
-        jCheckBoxMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("Sair");
-        jCheckBoxMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
-        jChbElzFornecedor.add(jCheckBoxMenuItem1);
-
-        jMenuBar1.add(jChbElzFornecedor);
+        jMenuBar1.add(jChbElzCadastro);
 
         jMenu2.setText("Movimento");
 
@@ -97,11 +123,11 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
         jCheckBoxMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendas.jpg"))); // NOI18N
         jMenu2.add(jCheckBoxMenuItem4);
 
-        jChbElzVenda.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_DOWN_MASK));
-        jChbElzVenda.setSelected(true);
-        jChbElzVenda.setText("Venda_Produto");
-        jChbElzVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/venda_produto.jpg"))); // NOI18N
-        jMenu2.add(jChbElzVenda);
+        jChbElzVendaProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        jChbElzVendaProduto.setSelected(true);
+        jChbElzVendaProduto.setText("Venda_Produto");
+        jChbElzVendaProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/venda_produto.jpg"))); // NOI18N
+        jMenu2.add(jChbElzVendaProduto);
 
         jChbElzCompras.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         jChbElzCompras.setSelected(true);
@@ -133,9 +159,39 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jChbElzClientesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jChbElzClientesStateChanged
+    private void jChbElzUsuariosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jChbElzUsuariosStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jChbElzClientesStateChanged
+    }//GEN-LAST:event_jChbElzUsuariosStateChanged
+
+    private void jChbElzUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzUsuariosActionPerformed
+  JDlgElzUsuarios jDlgElzUsuarios = new JDlgElzUsuarios(null, true);
+       jDlgElzUsuarios.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzUsuariosActionPerformed
+
+    private void jChbElzClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzClientesActionPerformed
+       JDlgElzClientes jDlgElzClientes = new JDlgElzClientes(null, true);
+       jDlgElzClientes.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzClientesActionPerformed
+
+    private void jChbElzProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzProdutosActionPerformed
+       JDlgElzProduto jDlgElzProdutos = new JDlgElzProduto(null, true);
+       jDlgElzProdutos.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzProdutosActionPerformed
+
+    private void jChbElzFornecedoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzFornecedoActionPerformed
+       JDlgElzFornecedor jDlgElzFornecedor = new JDlgElzFornecedor(null, true);
+       jDlgElzFornecedor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzFornecedoActionPerformed
+
+    private void jChbElzVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzVendedorActionPerformed
+       JDlgElzVendedor jDlgElzVendedores  = new JDlgElzVendedor (null, true);
+       jDlgElzVendedores .setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzVendedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,17 +229,17 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jChbElzCadastro;
     private javax.swing.JCheckBoxMenuItem jChbElzClientes;
     private javax.swing.JCheckBoxMenuItem jChbElzCompras;
     private javax.swing.JCheckBoxMenuItem jChbElzComprasProduto;
-    private javax.swing.JMenu jChbElzFornecedor;
-    private javax.swing.JCheckBoxMenuItem jChbElzVenda;
+    private javax.swing.JCheckBoxMenuItem jChbElzFornecedo;
+    private javax.swing.JCheckBoxMenuItem jChbElzProdutos;
+    private javax.swing.JCheckBoxMenuItem jChbElzSaie;
+    private javax.swing.JCheckBoxMenuItem jChbElzUsuarios;
+    private javax.swing.JCheckBoxMenuItem jChbElzVendaProduto;
     private javax.swing.JCheckBoxMenuItem jChbElzVendedor;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem5;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator1;

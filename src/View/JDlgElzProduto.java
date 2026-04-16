@@ -31,23 +31,23 @@ public class JDlgElzProduto extends javax.swing.JDialog {
         jBtnElzExcluir = new javax.swing.JButton();
         jFmtElzDataNascimento = new javax.swing.JFormattedTextField();
         jBtnElzCancelat = new javax.swing.JButton();
-        jLblElzSenha = new javax.swing.JLabel();
+        jLblElzCategoria = new javax.swing.JLabel();
         jBtnElzConfirmar = new javax.swing.JButton();
         jPwfElzSenha = new javax.swing.JPasswordField();
         jBtnElzPesquisar = new javax.swing.JButton();
-        jLblElzNivel = new javax.swing.JLabel();
+        jLblElzCodigoDeBarras = new javax.swing.JLabel();
         jLblElzNome = new javax.swing.JLabel();
         jLblElzCodigo = new javax.swing.JLabel();
         jLblElzApelido = new javax.swing.JLabel();
         jTxtElzCodigo = new javax.swing.JTextField();
         jTxtElzNome = new javax.swing.JTextField();
-        jCboElzNivel = new javax.swing.JComboBox<>();
         jTxtElzDescricao = new javax.swing.JTextField();
         jChbElzAtivo = new javax.swing.JCheckBox();
         jFmtElzMarca = new javax.swing.JFormattedTextField();
         jBtnElzIncluir = new javax.swing.JButton();
         jLblCpf = new javax.swing.JLabel();
         jBtnElzAlterar = new javax.swing.JButton();
+        jFmtElzCodigoDeBarra = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -59,7 +59,7 @@ public class JDlgElzProduto extends javax.swing.JDialog {
         jBtnElzCancelat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnElzCancelat.setText("Cancelar");
 
-        jLblElzSenha.setText("Senha");
+        jLblElzCategoria.setText("Categoria");
 
         jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.jpg"))); // NOI18N
         jBtnElzConfirmar.setText("Confirmar");
@@ -72,15 +72,13 @@ public class JDlgElzProduto extends javax.swing.JDialog {
         jBtnElzPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnElzPesquisar.setText("Pesquisar");
 
-        jLblElzNivel.setText("Nivel");
+        jLblElzCodigoDeBarras.setText("Codigo de barras");
 
         jLblElzNome.setText("Nome");
 
         jLblElzCodigo.setText("Codigo");
 
         jLblElzApelido.setText("Descrição");
-
-        jCboElzNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jChbElzAtivo.setText("ativo");
 
@@ -106,24 +104,20 @@ public class JDlgElzProduto extends javax.swing.JDialog {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTxtElzNome, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLblCpf)
-                                    .addComponent(jFmtElzMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLblElzCodigo)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLblElzSenha))
-                                        .addGap(47, 47, 47)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLblElzNivel)
-                                            .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblElzPreco)
-                                    .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(61, 61, 61)
-                                        .addComponent(jChbElzAtivo)))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jLblElzCategoria)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jPwfElzSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jFmtElzMarca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
+                                .addGap(javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jFmtElzCodigoDeBarra)
+                                    .addComponent(jLblElzPreco, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jFmtElzDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                    .addComponent(jLblElzCodigoDeBarras, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jChbElzAtivo)
+                                .addGap(145, 145, 145))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLblElzNome)
                                 .addGap(234, 234, 234)
@@ -175,20 +169,24 @@ public class JDlgElzProduto extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLblElzSenha)
-                            .addComponent(jLblElzNivel))
+                            .addComponent(jLblElzCategoria)
+                            .addComponent(jLblElzCodigoDeBarras))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCboElzNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jChbElzAtivo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBtnElzConfirmar)
-                            .addComponent(jBtnElzCancelat)
-                            .addComponent(jBtnElzExcluir)
-                            .addComponent(jBtnElzAlterar)
-                            .addComponent(jBtnElzIncluir)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jPwfElzSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jFmtElzCodigoDeBarra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jBtnElzConfirmar)
+                                    .addComponent(jBtnElzCancelat)
+                                    .addComponent(jBtnElzExcluir)
+                                    .addComponent(jBtnElzAlterar)
+                                    .addComponent(jBtnElzIncluir)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jChbElzAtivo)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jBtnElzPesquisar)))
@@ -251,17 +249,17 @@ public class JDlgElzProduto extends javax.swing.JDialog {
     private javax.swing.JButton jBtnElzExcluir;
     private javax.swing.JButton jBtnElzIncluir;
     private javax.swing.JButton jBtnElzPesquisar;
-    private javax.swing.JComboBox<String> jCboElzNivel;
     private javax.swing.JCheckBox jChbElzAtivo;
+    private javax.swing.JFormattedTextField jFmtElzCodigoDeBarra;
     private javax.swing.JFormattedTextField jFmtElzDataNascimento;
     private javax.swing.JFormattedTextField jFmtElzMarca;
     private javax.swing.JLabel jLblCpf;
     private javax.swing.JLabel jLblElzApelido;
+    private javax.swing.JLabel jLblElzCategoria;
     private javax.swing.JLabel jLblElzCodigo;
-    private javax.swing.JLabel jLblElzNivel;
+    private javax.swing.JLabel jLblElzCodigoDeBarras;
     private javax.swing.JLabel jLblElzNome;
     private javax.swing.JLabel jLblElzPreco;
-    private javax.swing.JLabel jLblElzSenha;
     private javax.swing.JPasswordField jPwfElzSenha;
     private javax.swing.JTextField jTxtElzCodigo;
     private javax.swing.JTextField jTxtElzDescricao;

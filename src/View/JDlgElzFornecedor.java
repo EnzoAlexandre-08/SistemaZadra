@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u08059751107
@@ -14,9 +16,39 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
      * Creates new form JDlgElzFornecedor
      */
     public JDlgElzFornecedor(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
+           super(parent, modal);
+    initComponents();
+    setTitle("Cadastro de Cliente");
+    setLocationRelativeTo(null);
+    habilitar(false);
     }
+    
+    public void habilitar(boolean valor) {
+       jTxtElzNome.setEnabled(valor);
+       jChbElzAtivo.setEnabled(valor);
+       jTxtElzCodigo.setEnabled(valor);
+       jTxtElzNomeFantasia.setEnabled(valor);
+       jFmtElzCnpj.setEnabled(valor);
+       jFmtElzCelular.setEnabled(valor);
+       jFmtElzInscricaoEstadual.setEnabled(valor);
+       jFmtElzCep.setEnabled(valor);
+       jFmtElzDataCadastro.setEnabled(valor);
+       jFmtElzEmail.setEnabled(valor);
+       jFmtElzTelefone.setEnabled(valor);
+       jTxtElzCidade.setEnabled(valor);
+       jTxtElzEndereco.setEnabled(valor);
+       jTxtElzEstado.setEnabled(valor);
+       jTxtElzEndereco.setEnabled(valor);
+       jTxtElzBairro.setEnabled(valor);
+       jBtnElzConfirmar.setEnabled(valor);
+       jBtnElzCancelat.setEnabled(valor);
+       jBtnElzAlterar.setEnabled(!valor);
+       jBtnElzExcluir.setEnabled(!valor);
+       jBtnElzIncluir.setEnabled(!valor);
+       jBtnElzPesquisar.setEnabled(!valor);
+       
+    }  
+                                          
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,7 +66,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
         jBtnElzExcluir = new javax.swing.JButton();
         jBtnElzCancelat = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTxtElzCodigo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jFmtElzEmail = new javax.swing.JFormattedTextField();
@@ -60,7 +92,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
         jFmtElzDataCadastro = new javax.swing.JFormattedTextField();
         jLabel14 = new javax.swing.JLabel();
         jFmtElzInscricaoEstadual = new javax.swing.JFormattedTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jChbElzAtivo = new javax.swing.JCheckBox();
         jFmtElzTelefone = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -75,18 +107,43 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
 
         jBtnElzPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnElzPesquisar.setText("Pesquisar");
+        jBtnElzPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzPesquisarActionPerformed(evt);
+            }
+        });
 
         jBtnElzIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnElzIncluir.setText("Incluir");
+        jBtnElzIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzIncluirActionPerformed(evt);
+            }
+        });
 
         jBtnElzAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnElzAlterar.setText("Alterar");
+        jBtnElzAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnElzExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnElzExcluir.setText("Excluir");
+        jBtnElzExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnElzCancelat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnElzCancelat.setText("Cancelar");
+        jBtnElzCancelat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzCancelatActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Codigo");
 
@@ -116,7 +173,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
 
         jLabel14.setText("Inscrição Estadual");
 
-        jCheckBox1.setText("Ativo");
+        jChbElzAtivo.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,10 +182,10 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox1)
+                    .addComponent(jChbElzAtivo)
                     .addComponent(jLabel9)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtElzCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,7 +257,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTxtElzCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -251,7 +308,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
                     .addComponent(jFmtElzDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFmtElzInscricaoEstadual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(jChbElzAtivo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnElzIncluir)
@@ -267,8 +324,34 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnElzConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzConfirmarActionPerformed
-        // TODO add your handling code here:
+           habilitar(false);        
+// TODO add your handling code here:
     }//GEN-LAST:event_jBtnElzConfirmarActionPerformed
+
+    private void jBtnElzIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzIncluirActionPerformed
+           habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzIncluirActionPerformed
+
+    private void jBtnElzAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzAlterarActionPerformed
+           habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzAlterarActionPerformed
+
+    private void jBtnElzExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzExcluirActionPerformed
+            JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+"Excluir registro", JOptionPane.YES_NO_OPTION);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzExcluirActionPerformed
+
+    private void jBtnElzCancelatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzCancelatActionPerformed
+              habilitar(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzCancelatActionPerformed
+
+    private void jBtnElzPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzPesquisarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,7 +402,7 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
     private javax.swing.JButton jBtnElzExcluir;
     private javax.swing.JButton jBtnElzIncluir;
     private javax.swing.JButton jBtnElzPesquisar;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jChbElzAtivo;
     private javax.swing.JFormattedTextField jFmtElzCelular;
     private javax.swing.JFormattedTextField jFmtElzCep;
     private javax.swing.JFormattedTextField jFmtElzCnpj;
@@ -341,9 +424,9 @@ public class JDlgElzFornecedor extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTxtElzBairro;
     private javax.swing.JTextField jTxtElzCidade;
+    private javax.swing.JTextField jTxtElzCodigo;
     private javax.swing.JTextField jTxtElzEndereco;
     private javax.swing.JTextField jTxtElzEstado;
     private javax.swing.JTextField jTxtElzNome;

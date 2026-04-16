@@ -33,30 +33,23 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTxtElzNome" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
                                   <Component id="jLblCpf" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jFmtElzMarca" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
                                   <Component id="jLblElzCodigo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jPwfElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLblElzSenha" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLblElzNivel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCboElzNivel" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Component id="jLblElzCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jPwfElzSenha" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jFmtElzMarca" alignment="0" pref="204" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="-2147483648" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jFmtElzCodigoDeBarra" max="32767" attributes="0"/>
                                   <Component id="jLblElzPreco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jFmtElzDataNascimento" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                      <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jFmtElzDataNascimento" alignment="1" pref="199" max="32767" attributes="0"/>
+                                  <Component id="jLblElzCodigoDeBarras" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLblElzNome" min="-2" max="-2" attributes="0"/>
@@ -125,22 +118,29 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLblElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLblElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblElzCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblElzCodigoDeBarras" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jPwfElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCboElzNivel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jChbElzAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="65" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jBtnElzConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnElzCancelat" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnElzExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnElzAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtnElzIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jPwfElzSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jFmtElzCodigoDeBarra" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="28" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jBtnElzConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnElzCancelat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnElzExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnElzAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnElzIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -177,9 +177,9 @@
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblElzSenha">
+    <Component class="javax.swing.JLabel" name="jLblElzCategoria">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Senha"/>
+        <Property name="text" type="java.lang.String" value="Categoria"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnElzConfirmar">
@@ -203,9 +203,9 @@
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblElzNivel">
+    <Component class="javax.swing.JLabel" name="jLblElzCodigoDeBarras">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nivel"/>
+        <Property name="text" type="java.lang.String" value="Codigo de barras"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblElzNome">
@@ -226,21 +226,6 @@
     <Component class="javax.swing.JTextField" name="jTxtElzCodigo">
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtElzNome">
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jCboElzNivel">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtElzDescricao">
     </Component>
@@ -271,6 +256,8 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtElzCodigoDeBarra">
     </Component>
   </SubComponents>
 </Form>
