@@ -162,7 +162,7 @@ public class JDlgElzClientes extends javax.swing.JDialog {
             }
         });
 
-        jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.jpg"))); // NOI18N
+        jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/check.png"))); // NOI18N
         jBtnElzConfirmar.setText("Confirmar");
         jBtnElzConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

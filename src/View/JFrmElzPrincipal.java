@@ -35,7 +35,7 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
         jChbElzProdutos = new javax.swing.JCheckBoxMenuItem();
         jChbElzVendedor = new javax.swing.JCheckBoxMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jChbElzSaie = new javax.swing.JCheckBoxMenuItem();
+        jChbElzSair = new javax.swing.JCheckBoxMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
         jChbElzVendaProduto = new javax.swing.JCheckBoxMenuItem();
@@ -107,11 +107,16 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
         jChbElzCadastro.add(jChbElzVendedor);
         jChbElzCadastro.add(jSeparator1);
 
-        jChbElzSaie.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jChbElzSaie.setSelected(true);
-        jChbElzSaie.setText("Sair");
-        jChbElzSaie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
-        jChbElzCadastro.add(jChbElzSaie);
+        jChbElzSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jChbElzSair.setSelected(true);
+        jChbElzSair.setText("Sair");
+        jChbElzSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
+        jChbElzSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbElzSairActionPerformed(evt);
+            }
+        });
+        jChbElzCadastro.add(jChbElzSair);
 
         jMenuBar1.add(jChbElzCadastro);
 
@@ -193,6 +198,11 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jChbElzVendedorActionPerformed
 
+    private void jChbElzSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbElzSairActionPerformed
+        System.exit(0); 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbElzSairActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,7 +245,7 @@ public class JFrmElzPrincipal extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jChbElzComprasProduto;
     private javax.swing.JCheckBoxMenuItem jChbElzFornecedo;
     private javax.swing.JCheckBoxMenuItem jChbElzProdutos;
-    private javax.swing.JCheckBoxMenuItem jChbElzSaie;
+    private javax.swing.JCheckBoxMenuItem jChbElzSair;
     private javax.swing.JCheckBoxMenuItem jChbElzUsuarios;
     private javax.swing.JCheckBoxMenuItem jChbElzVendaProduto;
     private javax.swing.JCheckBoxMenuItem jChbElzVendedor;

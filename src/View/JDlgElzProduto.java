@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u08059751107
@@ -16,8 +18,26 @@ public class JDlgElzProduto extends javax.swing.JDialog {
     public JDlgElzProduto(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cadastro de Produto");
+        setLocationRelativeTo(null);
+        habilitar(false);
     }
-
+          public void habilitar(boolean valor) {
+       jTxtElzNome.setEnabled(valor);
+       jFmtElzDataNascimento.setEnabled(valor);
+       jTxtElzDescricao.setEnabled(valor);
+       jFmtElzMarca.setEnabled(valor);
+       jFmtElzCodigoDeBarra.setEnabled(valor);
+       jTxtElzCodigo.setEnabled(valor);
+       jChbElzAtivo.setEnabled(valor);
+       jPwfElzSenha.setEnabled(valor);
+       jBtnElzConfirmar.setEnabled(valor);
+       jBtnElzCancelat.setEnabled(valor);
+       jBtnElzAlterar.setEnabled(!valor);
+       jBtnElzExcluir.setEnabled(!valor);
+       jBtnElzIncluir.setEnabled(!valor);
+       jBtnElzPesquisar.setEnabled(!valor);
+    } 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,13 +75,23 @@ public class JDlgElzProduto extends javax.swing.JDialog {
 
         jBtnElzExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnElzExcluir.setText("Excluir");
+        jBtnElzExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnElzCancelat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnElzCancelat.setText("Cancelar");
+        jBtnElzCancelat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzCancelatActionPerformed(evt);
+            }
+        });
 
         jLblElzCategoria.setText("Categoria");
 
-        jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.jpg"))); // NOI18N
+        jBtnElzConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/check.png"))); // NOI18N
         jBtnElzConfirmar.setText("Confirmar");
         jBtnElzConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +101,11 @@ public class JDlgElzProduto extends javax.swing.JDialog {
 
         jBtnElzPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnElzPesquisar.setText("Pesquisar");
+        jBtnElzPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzPesquisarActionPerformed(evt);
+            }
+        });
 
         jLblElzCodigoDeBarras.setText("Codigo de barras");
 
@@ -84,11 +119,21 @@ public class JDlgElzProduto extends javax.swing.JDialog {
 
         jBtnElzIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnElzIncluir.setText("Incluir");
+        jBtnElzIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzIncluirActionPerformed(evt);
+            }
+        });
 
         jLblCpf.setText("Marca");
 
         jBtnElzAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnElzAlterar.setText("Alterar");
+        jBtnElzAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnElzAlterarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,7 +154,7 @@ public class JDlgElzProduto extends javax.swing.JDialog {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(jPwfElzSenha, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jFmtElzMarca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
-                                .addGap(javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jFmtElzCodigoDeBarra)
                                     .addComponent(jLblElzPreco, javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,8 +242,36 @@ public class JDlgElzProduto extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnElzConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzConfirmarActionPerformed
-        // TODO add your handling code here:
+         habilitar(false);
+// TODO add your handling code here:
     }//GEN-LAST:event_jBtnElzConfirmarActionPerformed
+
+    private void jBtnElzIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzIncluirActionPerformed
+        habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzIncluirActionPerformed
+
+    private void jBtnElzAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzAlterarActionPerformed
+         habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzAlterarActionPerformed
+
+    private void jBtnElzExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzExcluirActionPerformed
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+"Excluir registro", JOptionPane.YES_NO_OPTION);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzExcluirActionPerformed
+
+    private void jBtnElzCancelatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzCancelatActionPerformed
+         habilitar(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzCancelatActionPerformed
+
+    private void jBtnElzPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnElzPesquisarActionPerformed
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+"Excluir registro", JOptionPane.YES_NO_OPTION);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnElzPesquisarActionPerformed
 
     /**
      * @param args the command line arguments

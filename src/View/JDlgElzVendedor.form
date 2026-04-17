@@ -54,6 +54,13 @@
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTxtElzNome" alignment="0" min="-2" pref="456" max="-2" attributes="0"/>
+                                  <Component id="jTxtElzCodigo" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jFmtElzCpf" alignment="0" min="-2" pref="268" max="-2" attributes="0"/>
@@ -65,22 +72,15 @@
                                       <Component id="jLblElzEmail" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jTxtElzEmail" max="32767" attributes="0"/>
+                                  <Component id="jFmtElzEmail" max="32767" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTxtElzNome" alignment="0" min="-2" pref="456" max="-2" attributes="0"/>
-                                  <Component id="jTxtElzCodigo" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jBtnElzIncluir" min="-2" pref="89" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jBtnElzAlterar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jBtnElzExcluir" min="-2" max="-2" attributes="0"/>
@@ -114,7 +114,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jFmtElzCpf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTxtElzEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtElzEmail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -138,7 +138,6 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jChbElzAtivo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jBtnElzPesquisar" min="-2" max="-2" attributes="0"/>
@@ -157,6 +156,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzExcluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnElzCancelat">
       <Properties>
@@ -165,6 +167,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzCancelatActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblElzDataCadastro">
       <Properties>
@@ -189,6 +194,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzPesquisarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblElzTelefone">
       <Properties>
@@ -214,8 +222,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtElzNome">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtElzEmail">
-    </Component>
     <Component class="javax.swing.JCheckBox" name="jChbElzAtivo">
       <Properties>
         <Property name="text" type="java.lang.String" value="ativo"/>
@@ -230,6 +236,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Incluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzIncluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblCpf">
       <Properties>
@@ -243,10 +252,15 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnElzAlterarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtElzTelefone">
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtElzDataCadastro">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtElzEmail">
     </Component>
   </SubComponents>
 </Form>
